@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <Button
+            android:id="@+id/buttonCalculateMeters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="Calcualte Distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonCalculateKelvin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:text="Calcualte Degrees"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonCalculateKilograms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:text="Calculate Weight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textFeet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Feet: "
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textFahrenheit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Fahrenheit: "
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCalculateKilograms" />
+
+        <TextView
+            android:id="@+id/textPounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Pounds: "
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCalculateMeters" />
+
+        <TextView
+            android:id="@+id/textMeters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Meters: "
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/textMetersAnswer"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textMetersAnswer"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text=""
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textMeters"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textKilogramsAnswer"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text=""
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textKilograms"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textKelvinAnswer"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text=""
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textKelvin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textKelvin" />
+
+        <TextView
+            android:id="@+id/textKilograms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Kilograms: "
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/textKilogramsAnswer"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCalculateMeters" />
+
+        <TextView
+            android:id="@+id/textKelvin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Kelvin: "
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/textKelvinAnswer"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCalculateKilograms" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/getFeet"
+            android:layout_width="75dp"
+            android:layout_height="46dp"
+            android:hint="0"
+            app:layout_constraintBottom_toBottomOf="@+id/textFeet"
+            app:layout_constraintStart_toEndOf="@+id/textFeet"
+            app:layout_constraintTop_toTopOf="@+id/textFeet" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/getFahrenheit"
+            android:layout_width="75dp"
+            android:layout_height="46dp"
+            android:hint="F"
+            app:layout_constraintBottom_toBottomOf="@+id/textFahrenheit"
+            app:layout_constraintStart_toEndOf="@+id/textFahrenheit"
+            app:layout_constraintTop_toTopOf="@+id/textFahrenheit" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/getPounds"
+            android:layout_width="75dp"
+            android:layout_height="46dp"
+            android:hint="Lbs"
+            app:layout_constraintBottom_toBottomOf="@+id/textPounds"
+            app:layout_constraintStart_toEndOf="@+id/textPounds"
+            app:layout_constraintTop_toTopOf="@+id/textPounds" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Convert To Metric!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
